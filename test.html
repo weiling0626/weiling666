@@ -1,0 +1,1394 @@
+
+<!doctype html>
+<html mip>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="standardhtml" href="http://m.xiejing.com">
+    <title>携景财富网移动端</title>
+    <link rel="shortcut icon" href="http://www.xiejing.com/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="https://mipcache.bdstatic.com/static/mipmain-v1.1.1.css">
+	<style mip-custom>
+        html, body {
+            font-size: 62.5%; /* 10÷16=62.5% */
+            width: 100%;
+            overflow-x: hidden;
+            font-family: "微软雅黑";
+            background: #f0f0f0;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /*****************页签*******************/
+        .tab {
+            width: 100%;
+            background: #1e71c1;
+            text-align: center;
+            height: 65px;
+        }
+
+        mip-img.logo {
+            width: 160px;
+            display: inline-block;
+            left: 50%;
+            position: absolute;
+            margin-left: -80px;
+            margin-top: 5px;
+        }
+
+        .tab .search {
+            width: 33px;
+            height: 33px;
+            margin-right: 15px;
+            margin-top: 15px;
+            float: right;
+        }
+
+        /***********nav**************/
+        .nav {
+            position: relative;
+            background: #f5f5f5;
+            font-size: 1.6rem;
+            padding: 8px;
+            line-height: 30px;
+            height: 30px;
+            margin-left: -9px;
+        }
+
+        .nav ul li {
+            width: 17.6%;
+            float: left;
+            text-align: center;
+            list-style: none;
+            font-size: 1.8rem;
+
+        }
+
+        .nav ul li a {
+            color: #575757;
+        }
+
+        .nav ul li.select a {
+            color: #fd661f;
+        }
+
+        .mip-html ul {
+            padding: 0;
+        }
+
+        /***********nav 滑动 高度**************/
+        .nav .swiper-wrapper, .nav .swiper-wrapper .swiper-slide {
+            height: 40px !important;
+        }
+
+        .nav .swiper-wrapper {
+            width: auto;
+            overflow: auto;
+        }
+
+        .nav .swiper-wrapper .swiper-slide {
+            width: 16.6%;
+            float: left;
+        }
+
+        .con1 {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .con1 .swiper-wrapper {
+
+        }
+
+        .banner .swiper-wrapper .swiper-slide,
+        .con1 .swiper-wrapper .swiper-slide {
+            float: left;
+            width: 33.3%;
+        }
+
+        mip-accordion section .show-more, mip-accordion section .show-less {
+            width: 36px;
+            position: absolute;
+            right: 7px;
+            top: 6px;
+            font-size: 1.7rem;
+            line-height: 33px;
+            background: #f5f5f5;
+            font-weight: normal;
+            color: #575757;
+        }
+
+        .nav .more {
+            height: 56px;
+            width: 20px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 4rem;
+            line-height: 50px;
+            background: #f5f5f5;
+        }
+
+        .right-pictxt > p {
+            margin-top: -4px;
+            margin-bottom: 5px;
+        }
+
+        .content-pic p {
+            text-align: left;
+            color: #242424;
+            font-size: 1.8rem;
+            padding: 6px 0px;
+        }
+
+        .nav .more a {
+            color: #8c8c8c;
+        }
+
+        /***********banner**************/
+        .banner {
+            width: 300%;
+            height: auto;
+            position: relative;
+        }
+
+        /***********con**************/
+        .con {
+            width: 100%;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            background: #ffffff;
+        }
+
+        .con .title {
+            color: #1e71c1;
+            font-size: 2rem;
+            text-align: left;
+            line-height: 35px;
+            vertical-align: middle;
+        }
+
+        .con .title span {
+            background: #fd661f;
+            height: 23px;
+            width: 6px;
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+            vertical-align: middle;
+            margin-top: -2px;
+        }
+
+        .con .content-pictxt {
+            width: calc(100% - 10px);
+            border-bottom: 1px solid #e6e6e6;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        .con .content-pictxt .left-pictxt {
+            width: 28%;
+            float: left;
+        }
+
+        .con .content-pictxt .right-pictxt {
+            width: 70%;
+            float: right;
+            text-align: left;
+        }
+
+        .con .content-pictxt .right-pictxt p a {
+            font-size: 2rem;
+            color: #242424;
+            text-align: left;
+        }
+
+        .con .content-pic span a,
+        .con .content-txt span a,
+        .con .content-pictxt .right-pictxt span a {
+            display: inline-block;
+            padding: 2px 4px;
+            color: #fd661f;
+            border-radius: 3px;
+            border: 1px solid #efb9b9;
+            font-size: 1.6rem;
+            margin-right: 15px;
+
+        }
+
+        .con .content-pic em,
+        .con .content-txt em,
+        .con .content-pictxt .right-pictxt em {
+            font-style: normal;
+            font-size: 1.6rem;
+            color: #999;
+        }
+
+        .con .content-pic {
+            width: calc(100% - 10px);
+            text-align: left;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .con .content-pic mip-img,
+        .con .content-pic img {
+            width: 32%;
+            margin-right: 1%;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        .content-pictxt {
+            display: block;
+            width: 110px;
+            min-height: 80px;
+        }
+
+        .content-pictxt mip-img img {
+            width: 110px;
+            height: 80px;
+        }
+
+        .con .content-pic mip-img img {
+            width: 100%;
+        }
+
+        .content-pic mip-img img {
+            width: 110px !important;
+            height: 50px !important;
+        }
+
+        .con .content-txt {
+            width: calc(100% - 10px);
+            text-align: left;
+            padding: 10px 0;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        p.tuijian {
+            color: #1e71c1;
+            height: 52px;
+            line-height:52px;
+            line-height: 40px;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        .content-txt p a {
+            text-align: left;
+            color: #242424;
+            font-size: 1.8rem;
+            padding: 6px 0px;
+        }
+
+        span.hot {
+            background: #f75766;
+            padding: 2px 4px !important;
+            border-radius: 3px;
+            font-size: 1.5rem;
+            color: #fff !important;
+        }
+
+        .fr {
+            float: right;
+        }
+
+        /***********foot**************/
+        .footer {
+            background: #f0f0f0;
+            color: #999999;
+            font-size: 1.6rem;
+        }
+
+        /********新加或者冲突css*****/
+
+        .pagination {
+            position: absolute;
+            z-index: 20;
+            float: right;
+            top: 160px;
+        }
+
+        .swiper-pagination-switch {
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #fff;
+            margin: 0 0px 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+            -webkit-transition: all 0.3s;
+            float: left;
+            margin-left: 5px;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .swiper-active-switch {
+            background: #fff;
+            width: 12px;
+            height: 12px;
+            margin-top: -2px;
+        }
+
+        .banner .mip-img-subtitle {
+            height: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-top: -42px;
+            text-align: left;
+            position: relative;
+        }
+
+        mip-img p {
+            position: absolute;
+            bottom: 0px;
+            padding-top: 0 !important;
+            line-height: 30px !important;
+            text-align: left !important;
+            /*opacity: 0.5;*/
+            background: rgba(0, 0, 0, 0.6);
+            padding-left: 10px;
+            /*filter: alpha(opacity=60);*/
+            width: 100%;
+            z-index: 20;
+            color: #fff !important;
+        }
+
+        p.tuijian a {
+            color: #1e71c1
+        }
+
+        .nav {
+            position: relative;
+        }
+
+        .content-pic p a {
+            text-align: left;
+            color: #242424;
+            font-size: 1.8rem;
+            padding: 6px 0px;
+        }
+
+        .footer p {
+            text-align: center;
+        }
+
+        .banner .mip-carousel .banner .mip-element {
+            min-height: 160px !important;
+            padding-bottom: 0 !important;
+        }
+
+        @media (min-width: 320px) and (max-width: 413px) {
+            .con .content-pictxt .right-pictxt p {
+                font-size: 1.5rem;
+            }
+
+            .con .content-pictxt .right-pictxt span {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (min-width: 375px) and (max-width: 411px) {
+            .content-pictxt .right-pictxt span {
+                margin-top: 8px;
+            }
+        }
+
+        @media (min-width: 415px) and (max-width: 640px) {
+            .banner .mip-carousel, .banner .mip-element {
+                min-height: 260px !important;
+            }
+
+            .banner .mip-img-subtitle {
+                margin-top: -70px !important;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width: 1920px) {
+            .banner .mip-carousel, .banner .mip-element {
+                min-height: 300px !important;
+            }
+
+            .banner .mip-img-subtitle {
+
+            }
+        }
+
+        .nav_ul li {
+            display: inline;
+        }
+
+        mip-img p a {
+            color: #fff;
+        }
+        .ad_div{
+            width:100%!important;
+            height:60px!important;
+            overflow:hidden;
+            margin:10px 0;
+        }
+/*        ad*/
+        .div_img1{
+                background: #fff;
+    height: 80px;
+        
+    padding-top: 10px;
+            margin-top:12px;
+        }
+.div_img1 >mip-img{
+        display:block;
+        width:110px;
+        min-height:80px!important;
+        overflow: hidden;
+        float:left;
+        margin-right:10px;
+    }
+    .div_img1>mip-img img{
+        width:110px;
+        height:80px!important;
+    }
+        .div_img1 div p{
+                padding: 0;
+    margin: 0;
+            height:28px;
+    line-height: 24px;
+    font-size: 1.6rem;
+            overflow:hidden
+        }
+        .oSpan{
+            margin-top: 24px;
+        }
+        .oSpan i{
+                font-style: normal;
+    font-size: 1.4rem!important;
+    color: #999;
+        }
+        .content-txt oSpan i{
+            margin-top:23px;
+        }
+        /*        ad*/
+    </style>
+</head>
+<body>
+<!-----logo------->
+<div class="tab">
+    <mip-img class="logo" src="http://m.xiejing.com/static/mip/logo.png"></mip-img>
+</div>
+<!--nav-->
+<mip-accordion sessions-key="mip_2">
+    <div class="mip-html nav">
+        <ul class="nav_ul">
+			
+
+  <li><a href="http://m.xiejing.com/finance" target="_blank">财经</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/stock" target="_blank">股票</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/ipo" target="_blank">新股</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/gegu" target="_blank">个股</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/world" target="_blank">全球</a></li>
+      	
+ </ul>
+    </div>
+    <section>
+        <h4>
+            <span class="show-more more">更多</span>
+            <span class="show-less more">收起</span>
+        </h4>
+        <div class="mip-html nav">
+            <ul class="nav_ul nav_hid">
+  <li><a href="http://m.xiejing.com/xianhuo" target="_blank">现货</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/futures" target="_blank">期货</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/licai" target="_blank">理财</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/biz" target="_blank">商业</a></li>
+      	
+
+  <li><a href="http://m.xiejing.com/fund" target="_blank">基金</a></li>
+      	
+            </ul>
+        </div>
+    </section>
+</mip-accordion>
+<!--lunbo-->
+<mip-carousel autoplay defer="1500" width="100%" height="160">
+<mip-img class="mip-img" alt="人民币最新消息：人民币兑美元中间价报6.7705元" src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445135136711.jpg">
+        <p class="mip-img-subtitle"><a href="http://m.xiejing.com/news/01Z2R3.html" target="_blank">人民币最新消息：人民币兑美元中间价报6.7705元</a></p>
+    </mip-img>
+<mip-img class="mip-img" alt="三星停售NOTE7手机 或将拉低韩国上季GDP" src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444095473813.jpg">
+        <p class="mip-img-subtitle"><a href="http://m.xiejing.com/intl/AxO8jH.html" target="_blank">三星停售NOTE7手机 或将拉低韩国上季GDP</a></p>
+    </mip-img>
+<mip-img class="mip-img" alt="苹果第四财季卖出4551万部iPhone 销量连续三季度滑坡" src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443958184356.jpg">
+        <p class="mip-img-subtitle"><a href="http://m.xiejing.com/america/NMxkP3.html" target="_blank">苹果第四财季卖出4551万部iPhone 销量连续三季度滑坡</a></p>
+    </mip-img>
+<mip-img class="mip-img" alt="超级量子计算机再现重大成果 量子通信概念股望借势" src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443716761624.jpg">
+        <p class="mip-img-subtitle"><a href="http://m.xiejing.com/read/No3eD1.html" target="_blank">超级量子计算机再现重大成果 量子通信概念股望借势</a></p>
+    </mip-img>
+<mip-img class="mip-img" alt="健康中国规划纲要发布 健康中国概念股" src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477442708296226.jpg">
+        <p class="mip-img-subtitle"><a href="http://m.xiejing.com/hot/KfP6R3.html" target="_blank">健康中国规划纲要发布 健康中国概念股</a></p>
+    </mip-img>
+
+</mip-carousel>
+</div>
+<!--推荐频道-->
+<div class="con">
+    <div class="title"><span></span>推荐排行</div>
+	
+    <div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/25/1477410406737904.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/fZgMHI.html" target="_blank">10月26日看涨停 周三最具爆发潜力三板块（附股）</a></p>
+            <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>10小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/25/1477410031286628.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/Oi6jT6.html" target="_blank">干货！10月26日有望涨停股一览（4股）</a></p>
+            <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>10小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/25/1477351795397332.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/A8bSv9.html" target="_blank">10月25日看涨停 周二最具爆发潜力三板块（附股）</a></p>
+            <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>2016-10-25 07:26</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pic">
+        <p><a href="http://m.xiejing.com/hot/fGJxmG.html" target="_blank">股权转让龙头泸天化六天五板 这些股将获主力爆炒！</a></p>
+        <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/25/1477327202355816.jpg"/></mip-img><mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/25/1477327137857865.jpg"/></mip-img><mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/25/1477324870999479.jpg"/></mip-img>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/hot/">热点板块</a></span><em>2016-10-24 23:59</em>
+    </div>
+
+    <div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/24/1477324561700101.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/hot/t58DV3.html" target="_blank">供给侧改革炒作潮再起 煤钢去产能将再下一城</a></p>
+            <span><a target="_blank" href="http://m.xiejing.com/stock/hot/">热点板块</a></span><em>2016-10-24 23:54</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <!--<p class="tuijian">进入推荐排行 ></p>-->
+</div>
+<div class="con">
+    <div class="title"><span></span>财经频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477448358102342.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/w2iPEJ.html" target="_blank">丁磊说要用网易云产品解放全中国的程序员</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>3分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477448185151005.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/zd6Z94.html" target="_blank">多部委发文支持发展养老服务 改造养老服务设施</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>5分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/intl/VFbHxD.html" target="_blank">昔日大国现成衰落之国 寡头能拯救俄罗斯吗？</a></p>
+        <span>国际经济</span><em>5分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447951694287.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/SPwWg.html" target="_blank">2016上海限购房政策出台 2016上海限购房政策通知</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>10分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447874391066.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/YlYwkH.html" target="_blank">2016养老金上调最新消息：养老金调整后1亿多人待遇提高</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>10分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/intl/rRt6m5.html" target="_blank">第四财季iPhone均价下滑 苹果股价季报后大跌2.3%</a></p>
+        <span>国际经济</span><em>13分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447565275458.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/news/beKXM6.html" target="_blank">滴滴进行全球化 网约车新政下的新一轮混战</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/finance/news/">财经资讯</a></span><em>16分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/intl/rK558.html" target="_blank">美媒：这个世界上只有一个国家比我们更慷慨</a></p>
+        <span>国际经济</span><em>17分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447364603322.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/intl/LWdnlH.html" target="_blank">中国投资者瞄准俄罗斯远东 欲投资121亿美元？</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/finance/intl/">国际经济</a></span><em>20分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/finance/">进入财经频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>股票频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477448328361214.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Quotes/57Flu9.html" target="_blank">新东家自带＂光环＂股权转让概念股沸腾</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/Quotes/">股市行情</a></span><em>2分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://www.jianiang.cn/uploads/allimg/151202/8500-1512020Z152438.jpeg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/analysis/Bu6UpC.html" target="_blank">中金:次高端白酒市场将增长至少30% 建议加仓6股</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/analysis/">大盘分析</a></span><em>5分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/Quotes/uyQzgL.html" target="_blank">千兆宽带战略启动 10只通讯股迎升级红利(名单)</a></p>
+        <span>股市行情</span><em>8分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447730471373.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/hot/6nKqUI.html" target="_blank">盘面观察:养老金将入市 A股会走牛么?</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/hot/">热点板块</a></span><em>13分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/hot/5RX02D.html" target="_blank">“健康中国”将催生16万亿大产业 概念股全扫描（附股）</a></p>
+        <span>热点板块</span><em>16分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447471172831.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/analysis/VZelEM.html" target="_blank">养老金入市利好效应愈发微弱 两市双双小幅低开</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/analysis/">大盘分析</a></span><em>18分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447529217822.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/hot/U3TT0G.html" target="_blank">首批养老金投资额约2000亿 养老概念股成摇钱树</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/hot/">热点板块</a></span><em>18分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447245751333.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/hot/Ih9gM6.html" target="_blank">六大地理信息概念牛股解析:测绘地理信息十三五规划印发</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/hot/">热点板块</a></span><em>22分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447039452715.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Quotes/i7VaOM.html" target="_blank">健康中国升至国家战略 受益股脱缰飙涨</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/stock/Quotes/">股市行情</a></span><em>24分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/stock/">进入股票频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>新股频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445901941657.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/apply/widsW4.html" target="_blank">10月26日电魂网络上市 电魂网络上市定位分析</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/apply/">申购</a></span><em>48分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445506101027.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/financing/o1xzB4.html" target="_blank">10月26日丝路视觉新股申购 丝路视觉申购指南</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/financing/">融资</a></span><em>54分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445193630584.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/financing/oyKsdH.html" target="_blank">赫美集团重启定增 募资额调减近八成</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/financing/">融资</a></span><em>56分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445059520616.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/financing/XSZbME.html" target="_blank">航天电子配套募资推进缓慢 股价倒挂成拦路虎</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/financing/">融资</a></span><em>57分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444883133805.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/apply/iGMLeB.html" target="_blank">新三板企业南京证券拟启动A股IPO</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/apply/">申购</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444795633699.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/chuangyeban/sVsdcA.html" target="_blank">前三季净利骤降六成 开尔新材实控人抛巨额减持计划</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/chuangyeban/">创业板</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444635494946.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/chuangyeban/0XdeSL.html" target="_blank">汉鼎宇佑拟13亿元并购游戏公司 布局娱乐产业</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/chuangyeban/">创业板</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/apply/FxZAFI.html" target="_blank">香港上市地方银行集体表态返航A股</a></p>
+        <span>申购</span><em>1小时前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444507831327.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/apply/luZQ7B.html" target="_blank">龙宝参茸风控不当曝光 隐瞒重大担保成违规通病</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/ipo/apply/">申购</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/ipo/">进入新股频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>个股频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447294427794.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Company/zQsxjA.html" target="_blank">天喻信息等上市公司卖房成万金油 揭秘上市公司卖房真相</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/Company/">公司</a></span><em>21分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445210947888.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Company/H0YVBG.html" target="_blank">2016苹果第四财季利润下滑19% 盘后股价跌逾2%</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/Company/">公司</a></span><em>54分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447270505969.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/dianjing/tofVPI.html" target="_blank">恒赢证券爆出三大股东光环云集 威华达一日飙涨67%后停牌</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/dianjing/">点睛</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447114525120.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/dianjing/4OP3v9.html" target="_blank">国家队三季度新进8股</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/dianjing/">点睛</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447053111755.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/dianjing/FRIpKA.html" target="_blank">险资三季度布局曝光 新进41股加仓33股</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/dianjing/">点睛</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443716761624.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/read/No3eD1.html" target="_blank">超级量子计算机再现重大成果 量子通信概念股望借势腾飞</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/read/">导读</a></span><em>1小时前</em><span class="fr hot">推荐</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446967578981.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/dianjing/fAJjG3.html" target="_blank">“健康中国2030”规划出炉 掘金六大领域</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/dianjing/">点睛</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443363241464.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/dianjing/RlR4T.html" target="_blank">四川双马年内近5倍涨幅 恒大概念股占了两只</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/dianjing/">点睛</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477442722393050.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/dianjing/D8nCNJ.html" target="_blank">10月来大宗交易成交289亿元 机构抢筹九股</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/gegu/dianjing/">点睛</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/gegu/">进入个股频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>全球频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477448225779995.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/BIatOB.html" target="_blank">Facebook高管：我们是科技公司 不是媒体公司</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>4分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477448049175123.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/oL8UD5.html" target="_blank">国际铜价上涨 受美元下滑和中国刺激措施希望支撑</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>7分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447934807241.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/gsdnc6.html" target="_blank">API原油库存意外大增近480万桶 美油跌幅进一步扩大</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>9分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447787767406.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/u95ka6.html" target="_blank">英国脱欧重创企业信心 “留欧派”企业更悲观</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>11分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447685508541.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/iDpKpN.html" target="_blank">美联储年内加息预期根基难撼 黄金需盼印度消费救兵？</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>15分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447091431707.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/e0oEw1.html" target="_blank">澳洲三季度通胀意外大幅高于预期 澳元短线狂飙逾60点</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>31分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446499105421.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/exchange/OQvhz9.html" target="_blank">花旗：“廉价”英镑尚未筑底 年底目标下看1.15</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/world/exchange/">外汇</a></span><em>33分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pic">
+        <p><a href="http://m.xiejing.com/america/XIzZdB.html" target="_blank">iPhone 8消息大汇总：你想要的iPhone 8都有</a></p>
+		<mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446672244285.jpg"/></mip-img><mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446672439834.jpg"/></mip-img><mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446672518670.jpg"/></mip-img>
+        <span>美股</span><em>33分钟前</em>
+		<div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/exchange/Yvmfw4.html" target="_blank">人民币对美元中间价回升39点 四天来首次上调</a></p>
+        <span>外汇</span><em>36分钟前</em>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/world/">进入全球频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>现货频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477445835127209.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/organization/OLXpr6.html" target="_blank">“高压经济”或影响美联储加息速度</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/organization/">机构评测</a></span><em>44分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444887178192.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/commodity/ty2Je6.html" target="_blank">果然是难兄难弟 黄金上涨的催化剂竟是原油</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/commodity/">大宗商品</a></span><em>59分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444784504529.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/organization/f9m5rD.html" target="_blank">高盛：人民币“跌跌不休”将有效提振黄金需求</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/organization/">机构评测</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/Oil/TUicy6.html" target="_blank">金应辉：10.26原油沥青因API利空如何操作</a></p>
+        <span>石油化工</span><em>1小时前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444577593908.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Oil/HUgKq5.html" target="_blank">新一轮圈钱机会降临 美国大选与油价的秘密</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/Oil/">石油化工</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443844688196.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/commodity/W7G3bM.html" target="_blank">人民币贬值送来“好礼” 黄金价格喜获重大支撑</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/commodity/">大宗商品</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443564894664.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Oil/ArqCP1.html" target="_blank">增产借口太荒唐 伊拉克放宽外资油企限制</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/Oil/">石油化工</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443477264637.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/Oil/8phTzK.html" target="_blank">200万桶原油首发中国 中伊能源合作项目顺利开展</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/Oil/">石油化工</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477443359444155.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/energy/7nnzj9.html" target="_blank">煤荒！发改委50天开5次会解燃煤之急</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/xianhuo/energy/">煤炭能源</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/xianhuo/">进入现货频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>期货频道</div>
+	
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/type/mYDCV.html" target="_blank">运输成本增加以及原料大涨 推动沪铝涨停</a></p>
+        <span>品种</span><em>1小时前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444769364444.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/type/I12jO8.html" target="_blank">期市早评：商品强弱分化 沪铝领涨硅铁触跌停</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/futures/type/">品种</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/type/i3QPaD.html" target="_blank">钢铁煤炭去产能不同步</a></p>
+        <span>品种</span><em>1小时前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/type/dh0kc4.html" target="_blank">煤企增产意愿不高 局部地区恐仍将遭遇“煤荒”</a></p>
+        <span>品种</span><em>1小时前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444486573329.png"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/yaowen/ecwr8J.html" target="_blank">钢煤去产能年度任务完成80% 保供应电厂港口存煤双升</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/futures/yaowen/">要闻</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/type/o6rzZE.html" target="_blank">煤炭央企销量近半靠外采运力 垄断导致市场畸形</a></p>
+        <span>品种</span><em>1小时前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/comments/EFFm1D.html" target="_blank">黄金：有人疯狂割肉 有人继续看高</a></p>
+        <span>评论</span><em>1小时前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444074331172.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/type/ClKuC8.html" target="_blank">短期金价不会大幅下跌 黄金已现买入契机</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/futures/type/">品种</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/yaowen/lsO6T4.html" target="_blank">躁动的“韭菜”：弃股入期寻洼地</a></p>
+        <span>要闻</span><em>1小时前</em>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/futures/">进入期货频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>理财频道</div>
+	
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/bank/aMFls1.html" target="_blank">黑马华夏人寿资本金承压 违规减持遭两地监管警告</a></p>
+        <span>银行</span><em>19分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/bank/u8FP68.html" target="_blank">养老金启动“入市”实战</a></p>
+        <span>银行</span><em>23分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/bank/CQhPAI.html" target="_blank">偿二代首次“体检”：三家险企风险较高</a></p>
+        <span>银行</span><em>24分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/bank/ZAIAKI.html" target="_blank">地方养老保险基金入市年内启动</a></p>
+        <span>银行</span><em>29分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/bank/A51r8F.html" target="_blank">阳光保险首推“护心保”手术意外险</a></p>
+        <span>银行</span><em>30分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/insurance/zvCGu4.html" target="_blank">养老金入市渐近 部分省份已制定委托投资计划</a></p>
+        <span>保险</span><em>40分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/insurance/dofuC4.html" target="_blank">首批养老金管理机构公布在即 初次入市规模约4000亿</a></p>
+        <span>保险</span><em>41分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446087667803.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/bank/pnvh2M.html" target="_blank">女子瘦身后办网银要求证明我是我 如何证明我是我？</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/licai/bank/">银行</a></span><em>42分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/bank/dlYOH1.html" target="_blank">可转债基金咸鱼翻身受追捧</a></p>
+        <span>银行</span><em>46分钟前</em>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/licai/">进入理财频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>商业频道</div>
+	<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446837800508.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/people/jwLCgE.html" target="_blank">唐僧老婆身家505亿 唐僧老婆陈丽华是做什么的?</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/biz/people/">人物</a></span><em>30分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pic">
+        <p><a href="http://m.xiejing.com/observe/uqVvZ6.html" target="_blank">亲测有效！360云盘关闭 高速下载360云盘文件方法</a></p>
+		<mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447023754337.png"/></mip-img><mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447023725107.png"/></mip-img><mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477447023202814.png"/></mip-img>
+        <span>观察</span><em>33分钟前</em><span class="fr hot">热点</span>
+		<div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/observe/1mkosJ.html" target="_blank">2016网约车从业资格证考试题库大全 资格考题及答案</a></p>
+        <span>观察</span><em>43分钟前</em><span class="fr hot">热点</span>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/marketing/IWOdHC.html" target="_blank">加多宝大规模裁员蔓延至总部：内外交困 费用缩减</a></p>
+        <span>营销</span><em>51分钟前</em><span class="fr hot">热点</span>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/chuangye/67JCFJ.html" target="_blank">潘石屹谈创业：让该死的死 该活的尽快活起来！</a></p>
+        <span>创业</span><em>56分钟前</em><span class="fr hot">热点</span>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444817695920.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/people/2ek29F.html" target="_blank">“中国伟哥之父”闫永明将回国受调查 系红通嫌犯</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/biz/people/">人物</a></span><em>1小时前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/observe/KQBprG.html" target="_blank">花王尿不湿可扫码查假 广东南沙自贸推质量溯源体系</a></p>
+        <span>观察</span><em>1小时前</em><span class="fr hot">热点</span>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444547875476.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/observe/HYLEwG.html" target="_blank">网传百度网盘将停止服务 百度正式回复了</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/biz/observe/">观察</a></span><em>1小时前</em><span class="fr hot">热点</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477444102126709.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/observe/Log9e.html" target="_blank">直播变现渠道从打赏转向广告 报价单折射盈利困局</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/biz/observe/">观察</a></span><em>1小时前</em><span class="fr hot">热点</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/biz/">进入商业频道 ></a></p>
+</div><div class="con">
+    <div class="title"><span></span>基金频道</div>
+	
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/xinwen/9gDBf2.html" target="_blank">众禄研究中心：怎么进行资产配置?</a></p>
+        <span>资讯</span><em>18分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/private/eiGUAJ.html" target="_blank">结构化私募产品不保本保收 私募大面积暂停披露业绩</a></p>
+        <span>私募</span><em>20分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/gongsi/v1YWpL.html" target="_blank">同德资本张强：金融机构要在合法合规基础上主动补位</a></p>
+        <span>公司</span><em>24分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/xinwen/zyymWH.html" target="_blank">建行浙江省分行 发起设立建筑产业基金</a></p>
+        <span>资讯</span><em>26分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/xinwen/HeEUZI.html" target="_blank">股债基金业绩齐涨 债券基金迎来大批分红</a></p>
+        <span>资讯</span><em>27分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/xinwen/vGiPN6.html" target="_blank">“国家队”基金三季度仓位稳定 四季度把握结构性机会</a></p>
+        <span>资讯</span><em>31分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/xinwen/nVt1U3.html" target="_blank">QFII三季度新进及加仓瞄准三行业</a></p>
+        <span>资讯</span><em>33分钟前</em>
+    </div>
+
+    <div class="content-txt">
+        <p><a href="http://m.xiejing.com/xinwen/RfhZMA.html" target="_blank">业绩地雷难防 基金重仓股冰火两重天</a></p>
+        <span>资讯</span><em>38分钟前</em>
+    </div>
+<div class="content-pictxt">
+        <div class="left-pictxt">
+            <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446024433457.jpg"></mip-img>
+        </div>
+        <div class="right-pictxt">
+            <p><a href="http://m.xiejing.com/gongsi/OxjPAC.html" target="_blank">引领“固定收益+”配置时代 鹏华基金多策略增强收益</a></p>
+        <span><a target="_blank" href="http://m.xiejing.com/fund/gongsi/">公司</a></span><em>41分钟前</em>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <p class="tuijian"><a target="_blank" href="http://m.xiejing.com/fund/">进入基金频道 ></a></p>
+</div>
+<div class="div_img1">
+                           <mip-img popup src="http://img0.xiejing.com/static/uploads/allimg/201610/26/1477446024433457.jpg"></mip-img>
+                           <div class="">
+                           <p><a href="#" target="_blank">微信到底是微信服务号到底是怎么回事微信服务号到底是怎么回事怎么回事？</a></p>
+                            </div>
+                           <div class="oSpan"><i>广告</i></div>
+                        </div>
+<div class="footer">
+    <p>Copyright 2007-2016 &copy; 携景财富网 All rights reserved</p>
+    <p>湘ICP备16003762号</p>`
+    
+</div>
+<script src="https://mipcache.bdstatic.com/static/mipmain-v1.1.0.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1.2/mip-accordion.js"></script>
+<script src="https://mipcache.bdstatic.com/static/v1.1/mip-stats-bidu.js"></script>
+<mip-stats-bidu token="2535a9739aabbfcb90dece2732773341"></mip-stats-bidu>
+
+<script src="../js/mip-ad-random.js"></script>
+<mip-ad-random></mip-ad-random>
+</body>
+</html>
