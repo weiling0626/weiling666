@@ -7,11 +7,11 @@ define("mip-ad-random", ["require", "customElement", "zepto"], function (i) {
                 function GetPosition() {
                     
                     //随机要放入广告的大位置
-                    var a = $("mip-ad-random").data("randomad"); 
-                    var arry1 = $('.' + a);
+                    var allLocation = $("mip-ad-random").data("randomad"); 
+                    var bigLocation = $('.' + allLocation);
                     var arry_length1 = arry1.length;
                     var rand_num = Math.ceil(Math.random() * arry_length1) - 1;
-                    var rank = arry1[rand_num];
+                    var rank = bigLocation[rand_num];
 
                     //随机子元素放入广告
                     var r_children = $(rank).children();
