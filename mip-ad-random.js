@@ -4,7 +4,7 @@ define("mip-ad-random", ["require", "customElement", "zepto"], function (i) {
             if (!t.isRender) {
                 t.isRender = !0;
 
-                function GetPosition() {
+                function getadress() {
                     
                     //随机要放入广告的大位置
                     var allLocation = $("mip-ad-random").data("randomad"); 
@@ -33,7 +33,7 @@ define("mip-ad-random", ["require", "customElement", "zepto"], function (i) {
                         $(rank2).after(advet);
                     }
                 }
-                GetPosition();
+                getadress();
             }
         }
         var $ = i("zepto");
